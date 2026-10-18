@@ -1,0 +1,71 @@
+/*
+  Background:     #F5F4F0
+  Cards:          #FFFFFF
+  Secondary:      #E5EEF5
+  Text:           #252B33
+  Muted Text:     #626B75
+  Accent:         #F2A58F
+  Accent Hover:   #E9937B
+  Powder Blue:    #C6D9E8
+  Steel Blue:     #527EA3
+  Borders:        #E8E6E1
+  Shadow:         rgba(37, 43, 51, 0.05)
+
+  Font: Plus Jakarta Sans
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    width: 100%;
+    position: absolute;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 30px;
+    letter-spacing: 1px;
+}
+
+li a {
+    text-decoration: none;
+    color: #252B33;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+li a:hover {
+    color: #626B75;
+}
+
+div#main {
+    background-image: url("/design/bg.png");
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12.5%;
+}
+
+div#main h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+div#main p {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.em {
+    color: #F2A58F;
+}

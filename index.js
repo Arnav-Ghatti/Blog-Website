@@ -9,6 +9,7 @@ const urlencodedParser = bodyParser.urlencoded({extended: true});
 var blogs = [];
 
 app.use(urlencodedParser);
+app.use(express.static("public"));
 
 // HOME PAGE
 // Display Home page
