@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.blogs) { %>
+    <% for( let i = 0; i < blogs.length; i++ ) { %>
+        <div>
+            <h1><%= blogs[i].title %></h1>
+            <p><%= blogs[i].desc %></p>
+            <a href="/blog/<%= i %>">Read More</a>
+        </div>
+    <% } %>
+<% } %>
