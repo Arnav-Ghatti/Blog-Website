@@ -22,14 +22,32 @@ app.get("/blogs", (req, res) => {
     res.render("blogs.ejs", {blogs: blogs});
 })
 
-app.post("/blogs", (req, res) => {
+app.post("/new", (req, res) => {
     blogs.push(req.body);
-    console.log(blogs);
     res.redirect("/blogs");
 })
 
 app.get("/blog/:id", (req, res) => {
-    
+    var selectedId = req.params.id;
+    var selectedBlog = blogs[selectedId];
+
+    res.render("blog.ejs", {blog: selectedBlog, id: selectedId})
+})
+
+app.get("/blog/:id/edit", (req, res) => {
+    var selectedId = req.params.id;
+    var selectedBlog = blogs[selectedId];
+
+    res.render("new.ejs", {blog: selectedBlog, id: selectedId})
+})
+
+app.post("/blogs/:id/edit", (req, res) => {
+    var selectedId = req.params.id;
+    var selectedBlog = blogs[selectedId];
+
+    blogs[selectedId] = req.body;
+
+    res.redirect(`/blogs/${selectedId}`);
 })
 
 app.listen(port, () => {
