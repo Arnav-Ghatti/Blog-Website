@@ -173,3 +173,60 @@ div.no-blogs h1 {
 .read-more:hover {
     color: #E9937B;
 }
+
+/* INDIVIDUAL BLOG PAGE */
+div#blog {
+    background-color: #F5F4F0;
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.container {
+    width: 50%;
+}
+
+.buttons {
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.edit {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #527EA3;
+    transition: all 0.3s ease;
+}
+.edit:hover {
+    color: #E9937B;
+}
+
+.delete {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #E8E6E1;
+    background-color: #F2A58F;
+    transition: all 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #E9937B;
+}
+
+.blog-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.blog-desc {
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}

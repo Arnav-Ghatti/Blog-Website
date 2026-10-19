@@ -1,11 +1,16 @@
 <%- include("partials/header.ejs") %>
 
-<h1><%= blog.title %></h1>
-<p><%= blog.desc %></p>
-<p><%= blog.content %></p>
+<div id="blog">
+    <div class="container">
+        <h1 class="blog-title"><%= blog.title %></h1>
+        <p class="blog-desc"><%= blog.desc %></p>
+        <p class="blog-content"><%= blog.content %></p>
 
-<a href="/blog/<%= id %>/edit">Edit</a>
-
-<form action="/blog/<%= id %>" method="post">
-    <input type="submit" value="Delete">
-</form>
+        <div class="buttons">
+            <a href="/blog/<%= id %>/edit" class="edit">Edit</a>
+            <form action="/blog/<%= id %>" method="post">
+                <input type="submit" value="Delete" class="delete">
+            </form>
+        </div>
+    </div>
+</div>
