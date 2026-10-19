@@ -67,7 +67,7 @@ app.post("/blogs/:id/edit", (req, res) => {
 
     blogs[selectedId] = req.body;
 
-    res.redirect(`/blogs/${selectedId}`);
+    res.redirect(`/blog/${selectedId}`);
 })
 
 app.listen(port, () => {

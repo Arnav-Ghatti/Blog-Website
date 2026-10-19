@@ -109,6 +109,7 @@ input.text {
     resize: none;
     border-radius: 5px;
     border: 2px solid #E8E6E1;
+    font-size: 1.1rem;
 }
 
 input.submit {
