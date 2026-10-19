@@ -1,31 +1,39 @@
-<%- include("partials/header.ejs") %>
+<%- include("partials/head.ejs") %>
 
-<div id="new">
-    <% if (locals.blog) { %>
-        <form action="/blogs/<%= id %>/edit" method="post">
-            <label for="title">Title</label>
-            <input type="text" name="title" value="<%= blog.title %>" class="text">
+<body>
+    <%- include("partials/navbar.ejs") %>
 
-            <label for="desc">Decription</label>
-            <input type="text" name="desc" value="<%= blog.desc %>" class="text">
+    <div id="new">
 
-            <label for="content">Content</label>
-            <textarea name="content" class="large-text" rows="14" cols="80"><%= blog.content %></textarea>
+        <div class="container">
+            <% if (locals.blog) { %>
+                <form action="/blogs/<%= id %>/edit" method="post">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" value="<%= blog.title %>" class="text">
 
-            <input type="submit" value="Update" class="submit">
-        </form>
-    <% } else { %>
-        <form action="/new" method="post">
-            <label for="title">Title</label>
-            <input type="text" name="title" class="text">
+                    <label for="desc">Decription</label>
+                    <input type="text" name="desc" value="<%= blog.desc %>" class="text">
 
-            <label for="desc">Decription</label>
-            <input type="text" name="desc" class="text">
+                    <label for="content">Content</label>
+                    <textarea name="content" class="large-text"><%= blog.content %></textarea>
 
-            <label for="content">Content</label>
-            <textarea name="content" class="large-text" rows="14" cols="80"></textarea>
+                    <input type="submit" value="Update" class="submit">
+                </form>
+            <% } else { %>
+                <form action="/new" method="post">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" class="text">
 
-            <input type="submit" value="Submit" class="submit">
-        </form>
-    <% } %>
-</div>
+                    <label for="desc">Decription</label>
+                    <input type="text" name="desc" class="text">
+
+                    <label for="content">Content</label>
+                    <textarea name="content" class="large-text"></textarea>
+
+                    <input type="submit" value="Submit" class="submit">
+                </form>
+            <% } %>
+        </div>
+        
+    </div>
+</body>

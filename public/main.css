@@ -13,59 +13,37 @@
 
   Font: Plus Jakarta Sans
 */
-
-/* HEADER */
 * {
     margin: 0;
     padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-#navbar {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-    width: 100%;
-    position: absolute;
-}
-
-#navbar li {
-    display: inline;
-    margin: 0 30px;
     letter-spacing: 1px;
 }
 
-li a {
-    text-decoration: none;
-    color: #252B33;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-li a:hover {
-    color: #626B75;
-}
-
 /* MAIN PAGE */
-div#main {
+body.main {
     background-image: url("/design/bg.png");
-    height: 80vh;
+    background-position-x: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 12.5%;
 }
 
-div#main h1 {
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7.5%;
+}
+
+#main h1 {
     font-size: 3.5rem;
-    letter-spacing: 5px;
     font-weight: 900;
     margin-bottom: 30px;
 }
 
-div#main p {
+#main p {
     font-weight: 300;
-    letter-spacing: 1px;
 }
 
 .em {
@@ -73,33 +51,34 @@ div#main p {
 }
 
 /* NEW BLOG PAGE */
-div#new {
-    height: 100vh;
+
+body {
+    background-color: #F5F4F0;
+}
+
+#new {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-color: #F5F4F0;
+    margin-top: 2.5%;
 }
 
 input {
     display: block;
+    border: 2px solid #E8E6E1;
 }
 
 label {
     display: block;
-    font-size: 1.1rem;
 }
 
 input.text {
     width: 100%;
     height: 2rem;
     border-radius: 5px;
-    border: 2px solid #E8E6E1;
     margin: 10px 0;
     padding: 0 10px;
-    font-size: 1.1rem;
 }
 
 .large-text {
@@ -109,14 +88,13 @@ input.text {
     resize: none;
     border-radius: 5px;
     border: 2px solid #E8E6E1;
-    font-size: 1.1rem;
+    
 }
 
 input.submit {
     font-size: 1.1rem;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 2px solid #E8E6E1;
     background-color: #F2A58F;
     transition: all 0.3s ease;
 }
@@ -183,7 +161,7 @@ div#blog {
     justify-content: center;
 }
 
-div.container {
+.container {
     width: 50%;
 }
 
