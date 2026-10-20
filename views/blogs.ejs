@@ -1,17 +1,21 @@
-<%- include("partials/header.ejs") %>
+<%- include("partials/head.ejs") %>
 
-<% if (locals.blogs.length != 0) { %>
-    <div id="blogs">
-        <% for( let i = 0; i < blogs.length; i++ ) { %>
-            <div class="blog">
-                <h1 class="title"><%= blogs[i].title %></h1>
-                <p class="desc"><%= blogs[i].desc %></p>
-                <a href="/blog/<%= i %>" class="read-more">Read More</a>
-            </div>
-        <% } %>
-    </div>
-<% } else { %>
-    <div id="blogs" class="no-blogs">
-        <h1>No Blogs Yet</h1>
-    </div>
-<% } %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+    <% if (locals.blogs.length != 0) { %>
+        <div id="blogs">
+            <% for( let i = 0; i < blogs.length; i++ ) { %>
+                <div class="blog">
+                    <h1 class="title"><%= blogs[i].title %></h1>
+                    <p class="desc"><%= blogs[i].desc %></p>
+                    <a href="/blog/<%= i %>" class="read-more">Read More</a>
+                </div>
+            <% } %>
+        </div>
+    <% } else { %>
+        <div id="blogs" class="no-blogs">
+            <h1>No Blogs Yet</h1>
+        </div>
+    <% } %>
+</body>
